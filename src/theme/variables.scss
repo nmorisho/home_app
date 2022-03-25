@@ -3,7 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
-  --ion-background-color:  rgb(65, 65, 65);
+  --ion-background-color: linear-gradient(197deg, rgba(100,100,100,1) 0%, rgba(63,63,63,1) 13.5%, rgba(29,29,29,1) 33.33%, rgba(0,0,0,1) 100%) !important;
+  // --ion-background-color:  rgb(65, 65, 65);
   --ion-text-color: white;
   --ion-text-color-rgb: rgb(255, 255, 255);
 
