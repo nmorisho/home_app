@@ -16,6 +16,7 @@
     <ion-label color="primary">Lease Expires: 22 Days</ion-label>
   </div>
 
+
     <ion-card color="primary">
         <!-- <ion-card-header> -->
           <ion-item>
@@ -27,69 +28,18 @@
 
     <br />
 
-  <div class="ion-text-center">
-    <ion-item class="ion-no-padding" lines="none">
-        <ion-icon class="homeIcons" slot="start" name="fast-food-outline"></ion-icon>
-      <ion-label>Buy Food Voucher</ion-label>
+    <div class="ion-text-center">
+      <ion-item class="ion-no-padding" lines="none" *ngFor="let item of homeOptions">
+        <ion-icon class="homeIcons" slot="start" [name]="item.startIcon"></ion-icon>
+      <ion-label>{{ item.option }}</ion-label> <ion-label color="primary" *ngIf="item.daysLeft">{{ item.daysLeft }} Days Left</ion-label>
+
       <ion-buttons slot="end">
           <ion-button color="primary" fill="clear">
-              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+              <ion-icon slot="end" [name]="item.endIcon"></ion-icon>
           </ion-button>
       </ion-buttons>
     </ion-item>
-
-    <ion-item class="ion-no-padding" lines="none">
-        <ion-icon class="homeIcons"  slot="start" name="card-outline"></ion-icon>
-      <ion-label>Buy Airtime</ion-label>
-      <ion-buttons slot="end">
-          <ion-button color="primary" fill="clear">
-              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item class="ion-no-padding" lines="none">
-      <ion-icon class="homeIcons"  slot="start" name="flash-outline"></ion-icon>
-    <ion-label>Buy Power:</ion-label><ion-label color="primary">6 days left</ion-label>
-    <ion-buttons slot="end">
-        <ion-button color="primary" fill="clear">
-            <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-        </ion-button>
-    </ion-buttons>
-  </ion-item>
-
-    <ion-item class="ion-no-padding" lines="none">
-      <ion-icon class="homeIcons"  slot="start" name="pulse-outline"></ion-icon>
-    <ion-label>Book Clinic</ion-label>
-    <ion-buttons slot="end">
-        <ion-button color="primary" fill="clear">
-            <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-        </ion-button>
-    </ion-buttons>
-  </ion-item>
-
-  <ion-item class="ion-no-padding" lines="none">
-    <ion-icon class="homeIcons"  slot="start" name="newspaper-outline"></ion-icon>
-  <ion-label>Transaction History</ion-label>
-  <ion-buttons slot="end">
-      <ion-button color="primary" fill="clear">
-          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-      </ion-button>
-  </ion-buttons>
-  </ion-item>
-
-  <ion-item class="ion-no-padding" lines="none">
-    <ion-icon class="homeIcons"  slot="start" name="alert-circle-outline"></ion-icon>
-  <ion-label>Report a problem</ion-label>
-  <ion-buttons slot="end">
-      <ion-button color="primary" fill="clear">
-          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-      </ion-button>
-  </ion-buttons>
-  </ion-item>
-
-
-  </div>
+    </div>
 
   <br />
   <footer>

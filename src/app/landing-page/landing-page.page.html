@@ -4,25 +4,34 @@
   </div>
 
   <ion-content>
-
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      </ion-thumbnail>
-      <ion-label>Item Thumbnail</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      </ion-thumbnail>
-      <ion-label>Item Thumbnail</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      </ion-thumbnail>
-      <ion-label>Item Thumbnail</ion-label>
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let item of rentalHomes">
+      <!-- <ion-item class="ion-no-padding ion-text-center" lines="none" *ngFor="let item of rentalHomes"> -->
+        <ion-card class="card">
+          <ion-card-title class="cardInfo">{{ item.address }}</ion-card-title>
+          <br />
+          <ion-card-subtitle class="cardInfo">{{ item.rentalHomeType }}</ion-card-subtitle>
+          <br />
+          <ion-card-content class="cardInfo">
+            <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide>
+                    <ion-img [src]="item.image1" alt="slide-1"></ion-img>
+              </ion-slide>
+              <ion-slide>
+                <ion-img [src]="item.image2" alt="slide-2"></ion-img>
+              </ion-slide>
+              <ion-slide>
+                <ion-img [src]="item.image3" alt="slide-3"></ion-img>
+              </ion-slide>
+            </ion-slides>
+          </ion-card-content>
+        </ion-card>
+          <br />
+      <!-- </ion-item> -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
   </ion-content>
 

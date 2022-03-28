@@ -7,3 +7,24 @@ ion-thumbnail {
   margin: 0 auto;
   float: fixed;
 }
+
+ion-slides{
+  ion-slide {
+    height: 100% !important;
+    width: 100% !important;
+
+    ion-card{
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.cardInfo {
+  --color: White;
+}
+
+.card {
+  --ion-background-color: linear-gradient(197deg, rgba(100,100,100,1) 0%, rgba(63,63,63,1) 13.5%, rgba(29,29,29,1) 33.33%, #bf9269 100%) !important;
+  padding: 15px;
+}
