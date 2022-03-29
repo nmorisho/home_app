@@ -28,3 +28,49 @@ ion-slides{
   --ion-background-color: linear-gradient(197deg, rgba(100,100,100,1) 0%, rgba(63,63,63,1) 13.5%, rgba(29,29,29,1) 33.33%, #bf9269 100%) !important;
   padding: 15px;
 }
+
+.bookNowBtn {
+  --color: White;
+}
+
+.details {
+  margin-top: -1px;
+  margin-bottom: 5px;
+  color: rgb(182, 182, 182);
+  font-size: 16px;
+}
+
+.ratingAndReviews {
+  margin-top: -2px;
+  color: white;
+}
+
+.star {
+  margin-top: 10px;
+  color: gold;
+}
+ .price {
+   color: white;
+   font-size: 36px;
+   margin-top: -15px;
+ }
+
+ .infoMsg {
+  font-size: 20px;
+  font-weight: bold;
+ }
+
+ .signUpBtn {
+  color: white;
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 25px;
+
+ }
+
+ .signInBtn {
+  color: white;
+  font-size: 13px;
+  margin-right: 10px;
+  margin-top: 25px;
+ }

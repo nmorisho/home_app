@@ -1,17 +1,42 @@
 <ion-app>
-  <div class="ion-text-center container">
-    <ion-img class="logo" style="width: 200px; height: 150px;" src="assets/ho-meLogoWhite.png" alt="Logo"></ion-img>
-  </div>
+  <span style="display: flex;  justify-content: space-between;">
+      <span>
+        <ion-button class="signUpBtn" (click)="signUp()">SIGN-UP</ion-button>
+      </span>
+      <div class="ion-text-center logo">
+        <ion-img class="logo" style="width: 150px; height: 100px;" src="assets/ho-meLogoWhiteName.png" alt="Logo"></ion-img>
+      </div>
+      <span>
+        <ion-button class="signInBtn" (click)="signIn()">SIGN-IN</ion-button>
+      </span>
+  </span>
 
   <ion-content>
+    <div class="ion-text-center container">
+      <h3>Welcome</h3>
+      <i style="color: #999999;">Your home away from home awaits</i>
+      <br />
+      <br />
+      <h5>Wherever You Go, We Have a Place for You. <br /><br />
+        <span class="infoMsg" style="color: #bf9269;">- BEST PRICES -</span>  <br />
+        <span class="infoMsg" style="color: #bf9269;">- 5 STAR HOSTS -</span>  <br />
+        <span class="infoMsg" style="color: #bf9269;">- INSTANT CONFIRMATIONS -</span>  <br /><br />
+        Types: Entire Home, Apartment, Cabin, Villa, Boutique Hotel, Bed & Breakfast, Cottage.</h5>
+    </div>
+
+    <br />
+
+    <div class="ion-text-center">
+      <ion-button fill="clear">Browse All</ion-button>
+    </div>
+
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let item of rentalHomes">
-      <!-- <ion-item class="ion-no-padding ion-text-center" lines="none" *ngFor="let item of rentalHomes"> -->
+        <ion-col class="ion-no-padding ion-text-center" lines="none" *ngFor="let item of rentalHomes" size="12" size-sm>
         <ion-card class="card">
-          <ion-card-title class="cardInfo">{{ item.address }}</ion-card-title>
+          <ion-card-title style="font-weight: bold; font-size: 28px" class="cardInfo">{{ item.address }}</ion-card-title>
           <br />
-          <ion-card-subtitle class="cardInfo">{{ item.rentalHomeType }}</ion-card-subtitle>
+          <ion-card-subtitle class="cardInfo"><h5>{{ item.rentalHomeType }}</h5></ion-card-subtitle>
           <br />
           <ion-card-content class="cardInfo">
             <ion-slides pager="true" [options]="slideOpts">
@@ -25,13 +50,50 @@
                 <ion-img [src]="item.image3" alt="slide-3"></ion-img>
               </ion-slide>
             </ion-slides>
+            <span class="details">{{ item.details }}</span>
           </ion-card-content>
+
+          <ion-row>
+            <ion-col size="4">
+             <h1 class="price">R{{ item.price }}</h1>
+            </ion-col>
+            <ion-col size="4">
+              <h6 class="ratingAndReviews">{{ item.rating }}</h6>&nbsp;
+              <ion-icon class="star" name="star"></ion-icon>
+              <ion-icon class="star" name="star"></ion-icon>
+              <ion-icon class="star" name="star-half"></ion-icon>
+              <ion-icon class="star" name="star-outline"></ion-icon>
+              <ion-icon class="star" name="star-outline"></ion-icon>
+
+            </ion-col>
+            <ion-col size="4">
+                <h6 class="ratingAndReviews">{{ item.reviews }} reviews</h6>
+            </ion-col>
+          </ion-row>
+
+          <br />
+
+          <ion-button color="tertiary" class="bookNowBtn">Book Now</ion-button>
         </ion-card>
           <br />
-      <!-- </ion-item> -->
         </ion-col>
       </ion-row>
     </ion-grid>
+
+    <div class="ion-text-center">
+      <ion-button fill="clear">Buy </ion-button> &nbsp; <span> | </span>
+      <ion-button fill="clear">Schedule </ion-button> &nbsp; <span> | </span>
+      <ion-button fill="clear">Services </ion-button> &nbsp; <span> | </span>
+      <ion-button fill="clear">Terms & Conditions</ion-button>
+      <br /><br />
+      <ion-icon name="logo-facebook" size="large"></ion-icon>&nbsp;
+      <ion-icon name="logo-twitter" size="large"></ion-icon>&nbsp;
+      <ion-icon name="logo-instagram" size="large"></ion-icon>&nbsp;
+      <br /><br />
+      <span> © 2022 HO-ME, Inc. </span>&nbsp;
+
+    </div>
+    <br />
 
   </ion-content>
 
