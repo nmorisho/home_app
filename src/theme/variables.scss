@@ -54,7 +54,7 @@
 	--ion-color-medium-rgb: 146,148,156;
 	--ion-color-medium-contrast: #000000;
 	--ion-color-medium-contrast-rgb: 0,0,0;
-	--ion-color-medium-shade: #808289;
+	--ion-color-medium-shade: #414141;
 	--ion-color-medium-tint: #9d9fa6;
 
 	--ion-color-light: #f4f5f8;
@@ -63,6 +63,16 @@
 	--ion-color-light-contrast-rgb: 0,0,0;
 	--ion-color-light-shade: #d7d8da;
 	--ion-color-light-tint: #f5f6f9;
+
+  ion-alert {
+    --background: #e2b728 !important;
+    --color: black !important;
+
+    button {
+        color: #ffffff !important;
+        font-size: 14px !important;
+    }
+  }
 
 }
 

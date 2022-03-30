@@ -1,0 +1,96 @@
+<ion-content>
+  <div class="ion-text-center container">
+    <ion-img style="width: 200px; height: 150px;" src="assets/ho-meLogoWhite.png" alt="Logo"></ion-img>
+
+    <h3>Bookings</h3>
+
+    <!-- Booking Details -->
+    <ion-item>
+      <ion-label color="primary">Room type:</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="entireHome">Entire Home</ion-select-option>
+        <ion-select-option value="apartment">Apartment</ion-select-option>
+        <ion-select-option value="cabin">Cabin</ion-select-option>
+        <ion-select-option value="villa">Villa</ion-select-option>
+        <ion-select-option value="cottage">Cottage</ion-select-option>
+        <ion-select-option value="boutiqueHotel">Boutique Hotel</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Start Date:</ion-label> &nbsp;&nbsp;&nbsp;&nbsp;
+      <ion-input id="input-date" type="date" mode="md" [(ngModel)]="selectedDate"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Availability:</ion-label>
+    </ion-item>
+
+    <br />
+
+    <!-- Personal Information -->
+    <ion-item>
+      <ion-label color="primary">Name:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Surname:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Email:</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Phone Number:</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Marital Status:</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="M">Married</ion-select-option>
+        <ion-select-option value="S">Single</ion-select-option>
+        <ion-select-option value="R">Relationship</ion-select-option>
+        <ion-select-option value="C">It's Complicated</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">ID Number:</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Physical Address:</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+    <br />
+
+    <!-- Employment Details -->
+    <ion-item>
+      <ion-label color="primary">Employer:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Position:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Monthly Salary:</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <br />
+    <ion-button size="medium" (click)="register()">Book Now</ion-button>
+    </div>
+
+    <br />
+</ion-content>
+

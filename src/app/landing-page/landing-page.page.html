@@ -12,7 +12,7 @@
   </span>
 
   <ion-content>
-    <div class="ion-text-center container">
+    <div class="ion-text-center container" style="margin: 5px;">
       <h3>Welcome</h3>
       <i style="color: #999999;">Your home away from home awaits</i>
       <br />
@@ -55,7 +55,12 @@
 
           <ion-row>
             <ion-col size="4">
-             <h1 class="price">R{{ item.price }}</h1>
+              <ion-col size="3">
+                <h1 class="price">R{{ item.price }}</h1>
+              </ion-col>
+              <ion-col size="1">
+                <h6 class="perDay">per day</h6>
+              </ion-col>
             </ion-col>
             <ion-col size="4">
               <h6 class="ratingAndReviews">{{ item.rating }}</h6>&nbsp;
@@ -73,7 +78,23 @@
 
           <br />
 
-          <ion-button color="tertiary" class="bookNowBtn">Book Now</ion-button>
+          <ion-button color="tertiary" class="bookNowBtn" (click)="bookNow()">Book Now</ion-button>
+          <br/><br/>
+          <ion-row>
+            <ion-col>
+              <ion-button fill="clear">
+              <ion-icon style="color: white;"name="share-outline" size="large"></ion-icon>
+              </ion-button>
+              <p style="color: white; margin-top: -3px;">Share</p>
+            </ion-col>
+
+            <ion-col>
+              <ion-button fill="clear">
+              <ion-icon style="color: white;" name="heart-outline" size="large"></ion-icon>
+              </ion-button>
+              <p style="color: white; margin-top: -3px;" >Favourite</p>
+            </ion-col>
+          </ion-row>
         </ion-card>
           <br />
         </ion-col>

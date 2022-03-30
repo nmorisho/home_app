@@ -63,4 +63,8 @@ export class LandingPagePage implements OnInit {
     this.router.navigate(['/register']);
   }
 
+  bookNow() {
+    this.router.navigate(['/book-now']);
+  }
+
 }

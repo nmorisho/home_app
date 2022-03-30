@@ -11,27 +11,48 @@
     </ion-header>
     <br />
 
-    <ion-label color="primary">Unit 7: Loft</ion-label>
+    <ion-label class="whiteText">Unit 7: Loft</ion-label>
     <br />
-    <ion-label color="primary">Lease Expires: 22 Days</ion-label>
+    <ion-label color="danger">Lease Expires in: 2 Days</ion-label>
   </div>
 
+  <ion-button expand="block" color="danger" class="rebookBtn">Rebook Room</ion-button>
 
-    <ion-card color="primary">
-        <!-- <ion-card-header> -->
-          <ion-item>
-          <ion-label>Wallet Bal: </ion-label><ion-label color="primary">R200</ion-label>
-            <ion-button slot="end" color="primary">TOP UP NOW</ion-button>
+    <div class="rebookBtn">
+        <ion-item color="dark">
+          <ion-label>Electrity: 16 kWh</ion-label>&nbsp;
+          <ion-button slot="end" color="secondary" fill="clear">
+            TOP UP NOW
+          </ion-button>
+        </ion-item>
+        <ion-item color="dark">
+          <ion-label>Water: 22 kWh</ion-label>&nbsp;
+          <ion-button slot="end" color="secondary" fill="clear">
+            TOP UP NOW
+          </ion-button>
+        </ion-item>
+        <ion-item color="dark">
+          <ion-label>Internet: 247mb</ion-label>&nbsp;
+          <ion-button slot="end" color="secondary" fill="clear">
+            TOP UP NOW
+          </ion-button>
+        </ion-item>
+      </div>
+
+          <ion-item style="margin: 10px;">
+          <ion-label>Wallet Bal: </ion-label><ion-label color="medium">R200</ion-label>
+            <ion-button slot="end" color="success">
+              <span>TOP UP NOW</span>
+            </ion-button>
           </ion-item>
-        <!-- </ion-card-header> -->
-    </ion-card>
+
 
     <br />
 
     <div class="ion-text-center">
       <ion-item class="ion-no-padding" lines="none" *ngFor="let item of homeOptions">
         <ion-icon class="homeIcons" slot="start" [name]="item.startIcon"></ion-icon>
-      <ion-label>{{ item.option }}</ion-label> <ion-label color="primary" *ngIf="item.daysLeft">{{ item.daysLeft }} Days Left</ion-label>
+      <ion-label>{{ item.option }}</ion-label> <ion-label color="medium" *ngIf="item.daysLeft">{{ item.daysLeft }} Days Left</ion-label>
 
       <ion-buttons slot="end">
           <ion-button color="primary" fill="clear">
@@ -40,9 +61,35 @@
       </ion-buttons>
     </ion-item>
     </div>
+    <br />
+
+    <div class="ion-text-center" >
+      <ion-button fill="outline" class="whiteText">News</ion-button> &nbsp;
+      <ion-button fill="outline" class="whiteText">Promotions</ion-button> &nbsp;
+      <ion-button fill="outline" class="whiteText">Jobs</ion-button> &nbsp;
+      <ion-button fill="outline" class="whiteText">Emergency</ion-button>
+      <br /><br />
+
+        <ion-button fill="clear" color="light">
+          <ion-icon slot="start" name="logo-whatsapp" size="large" color="success"></ion-icon>
+          <span >Estate Office Number: <br /> (+27) 62 061 9821</span>
+        </ion-button>
+
+    </div>
 
   <br />
   <footer>
     <ion-img style="width: 200px; height: 150px;" src="assets/ho-meLogoWhite.png" alt="Logo"></ion-img>
   </footer>
+  <br />
+
+  <div class="ion-text-center">
+    <ion-icon name="logo-facebook" size="large"></ion-icon>&nbsp;
+    <ion-icon name="logo-twitter" size="large"></ion-icon>&nbsp;
+    <ion-icon name="logo-instagram" size="large"></ion-icon>&nbsp;
+    <br /><br />
+    <span> © 2022 HO-ME, Inc. </span>&nbsp;
+    <br /><br />
+
+  </div>
 </ion-content>
